@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Roots >
+  <Roots.PropertyPathNames>
+    <RootPropertyPathName Name="SearchRecipe" />
+    <RootPropertyPathName Name="ListRecipesCommand" />
+    <RootPropertyPathName Name="Main" />
+    <RootPropertyPathName Name="searchRecipeCommand" />
+  </Roots.PropertyPathNames>
+  <Roots.RootTypes>
+    <RootType FullName="Windows.UI.Xaml.Application">
+      <RootProperty Name="RequestedTheme" />
+      <RootProperty Name="Resources" />
+    </RootType>
+    <RootType FullName="BonApp.ViewModel.ViewModelLocator" />
+    <RootType FullName="Windows.UI.Xaml.Controls.Page">
+      <RootProperty Name="DataContext" />
+      <RootProperty Name="Content" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Data.Binding">
+      <RootProperty Name="Source" />
+      <RootProperty Name="Path" />
+    </RootType>
+    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.StaticResourceExtension" />
+    <RootType FullName="Windows.UI.Xaml.Controls.Grid">
+      <RootProperty Name="Background" />
+      <RootProperty Name="Children" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ListView">
+      <RootProperty Name="Name" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Items" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="Height" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="Children" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
+      <RootProperty Name="Text" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Width" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.Button">
+      <RootProperty Name="Content" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="Command" />
+      <RootEvent Name="Click" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
+      <RootProperty Name="Text" />
+      <RootProperty Name="Foreground" />
+      <RootProperty Name="FontSize" />
+    </RootType>
+    <RootType FullName="BonApp.ListRecipes" />
+    <RootType FullName="BonApp.MainPage" />
+    <RootType FullName="BonApp.SearchRecipe" />
+  </Roots.RootTypes>
+</Roots>

@@ -1,0 +1,42 @@
+﻿<Page
+    x:Class="BonApp.View.ListFavorites"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BonApp.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    DataContext="{Binding Source={StaticResource Locator}, Path=ListFavorites}">
+
+    <Grid Background="#eeeeee">
+
+        <ListView Name="listAccueil" HorizontalAlignment="Left" >
+            <ListView Width="350" Height="93">
+                <StackPanel>
+                    <TextBlock Text="BonApp" Foreground="#FF4FB28E" FontSize="48"/>
+                    <TextBlock x:Uid="favRecipeDesc" Text="" FontSize="18.667"/>
+                </StackPanel>
+            </ListView>
+            <ListView Name="list" Grid.Row="1" Width="350" Height="500" HorizontalAlignment="Stretch" ItemsSource="{Binding Recipes}" SelectedItem="{Binding SelectedRecipe, Mode=TwoWay}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel HorizontalAlignment="Stretch">
+                            <TextBlock Text="{Binding title}"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        </ListView>
+        <Grid x:Name="CommandBarSource" Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <AppBarButton x:Name="EditStudent" Grid.Column="1"
+                      Icon="Forward"
+                      Command="{Binding ShowRecipeCommand}"></AppBarButton>
+        </Grid>
+
+    </Grid>
+</Page>

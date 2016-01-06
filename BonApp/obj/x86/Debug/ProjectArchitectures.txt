@@ -1,0 +1,1 @@
+C:\Users\Quentin\Desktop\Cours 3eme\WPhone\BonAppUWP-master\BonApp\BonApp.csproj;x86

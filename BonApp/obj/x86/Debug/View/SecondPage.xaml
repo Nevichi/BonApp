@@ -1,0 +1,29 @@
+﻿<Page
+    x:Class="BonApp.View.SecondPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BonApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    DataContext="{Binding Source={StaticResource Locator}, Path=SecondPage}"
+    mc:Ignorable="d">
+
+    <Grid Background="#eeeeee">
+        <ListView x:ConnectionId='1' Name="listAccueil" HorizontalAlignment="Left" >
+            <ListView Width="350" Height="93">
+                <StackPanel>
+                    <TextBlock Text="BonApp" Foreground="#FF4FB28E" FontSize="48"/>
+                    <TextBlock x:Uid="homeTitle" Text="" FontSize="18.667"/>
+                </StackPanel>
+            </ListView>
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Width="360">
+                <!-- changer les Click="" pour faire comme en labo!!!!!!!-->
+                <Button x:ConnectionId='2' x:Name="buttonSearch" x:Uid="searchTitle" Content="" HorizontalAlignment="Center" Width="336" Command="{Binding searchRecipeCommand}"  />
+                <Button x:ConnectionId='3' x:Name="buttonFavorites" x:Uid="favoritesTitle" Content="" HorizontalAlignment="Center" Margin="0,10,0,0" Width="336" Command="{Binding favoriteRecipeCommand}"/>
+            </StackPanel>
+        </ListView>
+
+
+    </Grid>
+</Page>
+

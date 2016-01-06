@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Roots >
+  <Roots.PropertyPathNames>
+    <RootPropertyPathName Name="Favorites" />
+    <RootPropertyPathName Name="RemoveFavoriteCommand" />
+    <RootPropertyPathName Name="SelectedRecipe" />
+    <RootPropertyPathName Name="source_url" />
+    <RootPropertyPathName Name="ListFavorites" />
+    <RootPropertyPathName Name="ShowRecipeCommand" />
+    <RootPropertyPathName Name="Recipes" />
+    <RootPropertyPathName Name="title" />
+    <RootPropertyPathName Name="ListRecipes" />
+    <RootPropertyPathName Name="Login" />
+    <RootPropertyPathName Name="LoginCommand" />
+    <RootPropertyPathName Name="PasswordInput" />
+    <RootPropertyPathName Name="UserInput" />
+    <RootPropertyPathName Name="Main" />
+    <RootPropertyPathName Name="subscribeCommand" />
+    <RootPropertyPathName Name="loginCommand" />
+    <RootPropertyPathName Name="Recipe" />
+    <RootPropertyPathName Name="AddToFavoriteCommand" />
+    <RootPropertyPathName Name="SearchRecipe" />
+    <RootPropertyPathName Name="ListRecipesCommand" />
+    <RootPropertyPathName Name="SecondPage" />
+    <RootPropertyPathName Name="favoriteRecipeCommand" />
+    <RootPropertyPathName Name="searchRecipeCommand" />
+    <RootPropertyPathName Name="Subscribe" />
+    <RootPropertyPathName Name="SubCommand" />
+    <RootPropertyPathName Name="PasswordConfInput" />
+  </Roots.PropertyPathNames>
+  <Roots.RootTypes>
+    <RootType FullName="Windows.UI.Xaml.Application">
+      <RootProperty Name="RequestedTheme" />
+      <RootProperty Name="Resources" />
+    </RootType>
+    <RootType FullName="BonApp.ViewModel.ViewModelLocator" />
+    <RootType FullName="Windows.UI.Xaml.Controls.Page">
+      <RootProperty Name="DataContext" />
+      <RootProperty Name="Content" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Data.Binding">
+      <RootProperty Name="Source" />
+      <RootProperty Name="Path" />
+      <RootProperty Name="Mode" />
+    </RootType>
+    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.StaticResourceExtension" />
+    <RootType FullName="Windows.UI.Xaml.Controls.Grid">
+      <RootProperty Name="Background" />
+      <RootProperty Name="Children" />
+      <RootProperty Name="ColumnDefinitions" />
+      <RootMethod Name="GetRow" />
+      <RootMethod Name="SetRow" />
+      <RootMethod Name="GetColumn" />
+      <RootMethod Name="SetColumn" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ListView">
+      <RootProperty Name="Name" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Items" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="ItemsSource" />
+      <RootProperty Name="SelectedItem" />
+      <RootProperty Name="ItemTemplate" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ColumnDefinition">
+      <RootProperty Name="Width" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.AppBarButton">
+      <RootProperty Name="Icon" />
+      <RootProperty Name="Command" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.WebView">
+      <RootProperty Name="Name" />
+      <RootProperty Name="Source" />
+      <RootProperty Name="Visibility" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="Width" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
+      <RootProperty Name="Children" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Width" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
+      <RootProperty Name="Text" />
+      <RootProperty Name="Foreground" />
+      <RootProperty Name="FontSize" />
+      <RootProperty Name="HorizontalAlignment" />
+    </RootType>
+    <RootType FullName="BonApp.View.Favorite" />
+    <RootType FullName="Windows.UI.Xaml.DataTemplate">
+      <RootProperty Name="Template" />
+    </RootType>
+    <RootType FullName="BonApp.View.ListFavorites" />
+    <RootType FullName="BonApp.ListRecipes" />
+    <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
+      <RootProperty Name="Text" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="Margin" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.Button">
+      <RootProperty Name="Content" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="Command" />
+    </RootType>
+    <RootType FullName="BonApp.View.Login" />
+    <RootType FullName="BonApp.MainPage" />
+    <RootType FullName="BonApp.View.Recipe" />
+    <RootType FullName="BonApp.SearchRecipe" />
+    <RootType FullName="BonApp.View.SecondPage" />
+    <RootType FullName="BonApp.View.Subscribe" />
+  </Roots.RootTypes>
+</Roots>
