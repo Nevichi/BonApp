@@ -2,6 +2,7 @@
 using BonApp.Model;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
+using NotificationsExtensions.Toasts;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using Windows.UI.Notifications;
 using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 
@@ -17,41 +19,7 @@ namespace BonApp.ViewModel
     public class FavoriteViewModel : ViewModelBase, INotifyPropertyChanged
     {
         AzureDataAccess data;
-
-        private BitmapImage iconFav;
-
-        public BitmapImage IconFav
-        {
-            get { return iconFav; }
-            set
-            {
-                iconFav = value;
-                RaisePropertyChanged("IconFav");
-            }
-        }
-
-
-        private bool isFavorite;
-
-        public bool IsFavorite
-        {
-            get { return isFavorite; }
-            set { isFavorite = value; }
-        }
-
-        private ICommand _addToFavoriteCommand;
-        public ICommand AddToFavoriteCommand
-        {
-            get
-            {
-                if (this._addToFavoriteCommand == null)
-                {
-                    this._addToFavoriteCommand = new RelayCommand(() => AddToFavorite());
-                }
-                return this._addToFavoriteCommand;
-            }
-        }
-
+        
         private ICommand _removeFavoriteCommand;
         public ICommand RemoveFavoriteCommand
         {
@@ -92,24 +60,8 @@ namespace BonApp.ViewModel
         {
             SelectedRecipe = (Recipe)e.Parameter;
             uri = new Uri(SelectedRecipe.source_url);
-            iconFav = new BitmapImage(new Uri("ms-appx:///Assets/Star-Empty.png"));
         }
 
-        public async void AddToFavorite()
-        {
-            //if (data.AddToFavorite(SelectedRecipe)) {
-            //    IToastText01 templateContent = ToastContentFactory.CreateToastText01();
-            //    templateContent.TextBodyWrap.Text = "Body text that wraps over three lines";
-            //    toastContent = templateContent;
-            //}
-
-
-            if (await data.AddToFavorite(SelectedRecipe))
-            {
-                iconFav.UriSource = new Uri("ms-appx:///Assets/Star-Full.png");
-            }
-
-        }
 
         public FavoriteViewModel()
         {
@@ -121,18 +73,28 @@ namespace BonApp.ViewModel
 
         public async void RemoveFavorite()
         {
-            //if (data.AddToFavorite(SelectedRecipe)) {
-            //    IToastText01 templateContent = ToastContentFactory.CreateToastText01();
-            //    templateContent.TextBodyWrap.Text = "Body text that wraps over three lines";
-            //    toastContent = templateContent;
-            //}
 
             if (await data.RemoveFavorite(SelectedRecipe)) {
-
+                createToast("recipeRemoved");
             }
+        }
 
+        public void createToast(String value)
+        {
+            var loader = new Windows.ApplicationModel.Resources.ResourceLoader();
+            ToastVisual visual = new ToastVisual()
+            {
+                TitleText = new ToastText()
+                {
 
+                    Text = loader.GetString(value)
+                },
+            };
 
+            ToastContent toastContent = new ToastContent();
+            toastContent.Visual = visual;
+            var toast = new ToastNotification(toastContent.GetXml());
+            ToastNotificationManager.CreateToastNotifier().Show(toast);
         }
     }
 }

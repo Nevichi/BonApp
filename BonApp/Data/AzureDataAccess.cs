@@ -23,8 +23,6 @@ namespace BonApp.Data
             client.BaseAddress = new Uri("http://bonappuwp.azurewebsites.net/");
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-            
-
         }
 
         public async Task<List<Recipe>> GetAllRecipes()
@@ -49,7 +47,6 @@ namespace BonApp.Data
             var recipes = new List<Recipe>();
             var user = new User();
             var recipe = new Recipe();
-            if (currentApp.GlobalInstance.userId == 0) { currentApp.GlobalInstance.userId = 1; }
             HttpResponseMessage response = await client.GetAsync("api/users/" + currentApp.GlobalInstance.userId);
             if (response.IsSuccessStatusCode) {
                 string json = await response.Content.ReadAsStringAsync();

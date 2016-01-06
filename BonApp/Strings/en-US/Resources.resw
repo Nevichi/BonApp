@@ -171,4 +171,10 @@
   <data name="subscribeTitle.Content" xml:space="preserve">
     <value>Subscribe</value>
   </data>
+  <data name="recipeAdded" xml:space="preserve">
+    <value>Recipe added to favorites</value>
+  </data>
+  <data name="recipeRemoved" xml:space="preserve">
+    <value>Recipe removed from favorites</value>
+  </data>
 </root>
