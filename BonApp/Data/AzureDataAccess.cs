@@ -139,6 +139,7 @@ namespace BonApp.Data
             string json2 = JsonConvert.SerializeObject(userToCreate);
             HttpContent content = new StringContent(json2, Encoding.UTF8, "application/json");
             HttpResponseMessage response2 = await client.PostAsync("api/users", content);
+            if (response2.StatusCode.ToString().Equals("Conflict")){ return "errorSub"; }
             return "success";
         }
 
